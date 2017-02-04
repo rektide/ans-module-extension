@@ -5,6 +5,9 @@ from ansible.plugins.action.include_vars import ActionModule as IncludeVars
 from ansible.plugins.action import ActionBase
 
 class ActionModule(IncludeVars):
+
+    TRANSFERS_FILES = False
+
     def run(self, tmp=None, task_vars=None):
         result = super(ActionModule, self).run(tmp, task_vars)
         return result
