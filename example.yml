@@ -1,0 +1,13 @@
+---
+- hosts: all
+  vars:
+    myNumber: 45
+  tasks:
+  - action: include_vars2
+    args:
+      file: vars.yaml
+  - debug: msg="{{myVariable}}"
+  - action: include_vars
+    args:
+      file: vars.yaml
+  - debug: msg="{{myVariable}}"
